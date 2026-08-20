@@ -56,10 +56,10 @@ via hyperparameter scans before final comparison.
 
 | Method | Key settings | Mean test AUC |
 |---|---|---|
-| BDTG | NTrees=850, MaxDepth=3, Shrinkage=0.10, BaggedSampleFraction=0.5 | 0.949 |
-| PDEFoam | nActiveCells=750, nSampl=2000 | — |
-| MLP | NCycles=1000, HiddenLayers=N+5,N, TrainingMethod=BP, EstimatorType=CE | 0.917 |
-| **DNN** | **Layout=DENSE\|64\|RELU ×3, Optimizer=ADAM, MaxEpochs=200** | **0.912** |
+| BDTG | NTrees=1300, MaxDepth=3, Shrinkage=0.10, BaggedSampleFraction=0.8 | 0.896 |
+| PDEFoam | nActiveCells=750, nSampl=2000 | 0.863 |
+| MLP | NCycles=1200, HiddenLayers=N+5,N, TrainingMethod=BP, EstimatorType=CE | 0.921 |
+| **DNN** | **Layout=DENSE\|64\|RELU ×5, Optimizer=ADAM, MaxEpochs=500, ConvergenceSteps=50** | **0.918** |
 
 **Result:** The DNN produced the most precise confusion matrix across all four
 classes, with the fewest off-diagonal misclassifications.
